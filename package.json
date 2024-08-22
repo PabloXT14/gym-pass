@@ -10,7 +10,8 @@
     "lint:check": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --ext .ts --fix",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "@rocketseat/eslint-config": "2.2.2",
     "@types/bcryptjs": "2.4.6",
     "@types/node": "22.0.0",
+    "@vitest/coverage-v8": "2.0.5",
     "eslint": "8.57.0",
     "prisma": "5.17.0",
     "tsup": "8.2.3",
