@@ -1,7 +1,6 @@
 import { InMemoryUsersRepository } from '@/repositories/in-memory/in-memory-users-repository'
-import { describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { GetUserProfileUseCase } from './get-user-profile-use-case'
-import { before } from 'node:test'
 import { hash } from 'bcryptjs'
 import { ResourceNotFoundError } from './errors/resource-not-found-error'
 
@@ -9,7 +8,7 @@ let usersRepository: InMemoryUsersRepository
 let getUserProfileUseCase: GetUserProfileUseCase
 
 describe('Get User Profile Use Case', () => {
-  before(() => {
+  beforeEach(() => {
     usersRepository = new InMemoryUsersRepository()
     getUserProfileUseCase = new GetUserProfileUseCase(usersRepository)
   })
